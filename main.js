@@ -1,15 +1,38 @@
-let count = 1;
-
+let count = 0;
+// Calculate Button 
 document.getElementById("calculate").addEventListener('click', function(){
-
+    count += 1;
     const income = parseFloat(document.getElementById("income").value);
     const software = parseFloat(document.getElementById("software").value);
     const courses = parseFloat(document.getElementById("courses").value);
     const internet = parseFloat(document.getElementById("internet").value);
 
+    if(income <= 0 || isNaN(income)){
+        document.getElementById("income-error").classList.remove("hidden");
+        return;
+    }else{
+
+    }
+    if (software <= 0 || isNaN(software)) {
+      document.getElementById("software-error").classList.remove("hidden");
+      return;
+    }
+    if (courses <= 0 || isNaN(courses)) {
+      document.getElementById("courses-error").classList.remove("hidden");
+      return;
+    }
+    if (internet <= 0 || isNaN(internet)) {
+      document.getElementById("internet-error").classList.remove("hidden");
+      return;
+    }
+
     const addExpenses = software + courses + internet;
     const mainBlance = income - addExpenses
     
+    if (addExpenses > income) {
+      document.getElementById("logic-error").classList.remove("hidden");
+      return;
+    }
     const totalExpenses = document.getElementById("total-expenses");
     totalExpenses.innerText = addExpenses.toFixed(2);
     const totalBlance = document.getElementById("balance");
@@ -24,7 +47,7 @@ document.getElementById("calculate").addEventListener('click', function(){
       "bg-white p-3 rounded-md border-1-2 border-indigo-500";
 
     historyItem.innerHTML = `
-    <p>Serile : ${count++}</p>
+    <p>Serile : ${count}</p>
         <p class= "text-sm text-gray-500">${new Date().toLocaleString()}</p>
         <p class= "text-sm text-gray-500">income : ${income.toFixed(2)}</p>
         <p class= "text-sm text-gray-500">Expenses : ${addExpenses.toFixed(
