@@ -1,5 +1,5 @@
     
-    // Coustom-Tailwind-css 
+//     // Coustom-Tailwind-css 
 //     <script>
 //     tailwind.config = {
 //       theme: {
