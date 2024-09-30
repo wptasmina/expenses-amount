@@ -2,7 +2,10 @@
 function totleIncomById(id) {
   return parseFloat(document.getElementById(id).value);
 }
-
+//EmatyValue
+function ematyValue(id){
+  document.getElementById(id).value = "";
+}
 // calculate - savings; 
 function calculatSavingsById(id) {
 
