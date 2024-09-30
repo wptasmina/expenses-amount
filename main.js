@@ -49,12 +49,6 @@ document.getElementById("calculate").addEventListener('click', function(){
   //new Div Create history Item
   addToHistory(income, addExpenses, mainBlance);
 
-  // inpute value ematy function = ""
-  ematyValue("income");
-  ematyValue("software");
-  ematyValue("courses");
-  ematyValue("internet");
-
 });
 
 // calculate - savings; 
