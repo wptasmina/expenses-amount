@@ -10,21 +10,21 @@ document.getElementById("calculate").addEventListener('click', function(){
   const internet = totleIncomById("internet");
 
   if (income <= 0 || isNaN(income)) {
-    showHidde("income-error");
+    showHidden("income-error");
     return;
-  } else {
   }
   if (software <= 0 || isNaN(software)) {
-    showHidde("software-error");
+    showHidden("software-error");
     return;
   }
   if (courses <= 0 || isNaN(courses)) {
     // document.getElementById("courses-error").classList.remove("hidden");
-    showHidde("courses-error");
+    // return;
+    showHidden("courses-error");
     return;
   }
   if (internet <= 0 || isNaN(internet)) {
-    showHidde("internet-error");
+    showHidden("internet-error");
     return;
   }
 
@@ -32,7 +32,8 @@ document.getElementById("calculate").addEventListener('click', function(){
   const mainBlance = income - addExpenses;
 
   if (addExpenses > income) {
-    showHidde("logic-error");
+    // document.getElementById("logic-error").classList.remove("hidden");
+    showHidden("logic-error");
     return;
   }
   const totalExpenses = document.getElementById("total-expenses");
@@ -120,5 +121,5 @@ assistantTab.addEventListener("click", function () {
   );
 expenseForm.classList.remove("hidden");
 historySec.classList.add("hidden");
-//   console.log(historyTab);
+
 });
