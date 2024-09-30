@@ -1,22 +1,16 @@
-
+//calculate button
 function totleIncomById(id) {
   return parseFloat(document.getElementById(id).value);
 }
-//EmatyValue
-function ematyValue(id){
-  document.getElementById(id).value = "";
-}
+
 // calculate - savings; 
 function calculatSavingsById(id) {
-
 return document.getElementById(id);
-
 }
 
 //remove Error hidden
 function showHidden(id){
     document.getElementById(id).classList.remove("hidden");
-    
 }
 
 //toFixed
